@@ -1,0 +1,32 @@
+<!-- <div class="wrapper" *ngIf="show">
+  <router-outlet></router-outlet>
+</div> -->
+
+<h2>List of News</h2>
+
+<mat-table [dataSource]="list | async" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="url">
+      <mat-header-cell *matHeaderCellDef> Url </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.url}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="created_at">
+      <mat-header-cell *matHeaderCellDef> Created At </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.created_at}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="author">
+      <mat-header-cell *matHeaderCellDef> Author </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.author}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table> 
