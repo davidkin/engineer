@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class HomeService {
-    posts: Observable<IPosts>;
+    post: Observable<IPosts>;
+
     constructor(
         private http: HttpClient
     ){}
@@ -16,10 +17,10 @@ export class HomeService {
     }
 
     setPosts (info) {
-        this.posts = info;
+        this.post = info;
     }
 
-    getPosts () {
-        return this.posts;
+    getPost () {
+        return this.post;
     }
 }

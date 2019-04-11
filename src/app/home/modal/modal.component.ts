@@ -10,14 +10,19 @@ import { Observable } from 'rxjs';
 })
 export class ModalComponent implements OnInit {
     post: Observable<IPosts>;
+    // show: Boolean = true;
 
     constructor(
         private homeService: HomeService
     ) { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {}
 
     ngDoCheck(): void {
-       this.post = this.homeService.getPosts();
+        this.post = this.homeService.getPost();
+    }
+
+    hideModal () {
+        // this.show = false;
     }
 }

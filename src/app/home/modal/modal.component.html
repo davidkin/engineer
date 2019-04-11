@@ -1,0 +1,19 @@
+<div class="modal" *ngIf="post">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ post.author }}</mat-card-title>
+            <mat-card-subtitle>{{ post.created_at }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p>{{ post.title }}</p>
+            <a href="{{post.url}}">{{post.url}}</a>
+            <!-- {{ post | json }} -->
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="hideModal()">Close</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
