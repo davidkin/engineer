@@ -9,11 +9,11 @@
         <mat-card-content>
             <p>{{ post.title }}</p>
             <a href="{{post.url}}">{{post.url}}</a>
-            <!-- {{ post | json }} -->
+            <p>{{ post | json }}</p>
         </mat-card-content>
 
-        <mat-card-actions>
-            <button mat-raised-button color="primary" (click)="hideModal()">Close</button>
-        </mat-card-actions>
+        <!-- <mat-card-actions>
+            <button mat-raised-button color="primary">Close</button>
+        </mat-card-actions> -->
     </mat-card>
 </div>

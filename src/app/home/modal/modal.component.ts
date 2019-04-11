@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class ModalComponent implements OnInit {
     post: Observable<IPosts>;
-    // show: Boolean = true;
 
     constructor(
         private homeService: HomeService
@@ -22,7 +21,8 @@ export class ModalComponent implements OnInit {
         this.post = this.homeService.getPost();
     }
 
-    hideModal () {
-        // this.show = false;
-    }
+    // hideModal () {        
+    //     this.post = null;
+    //     console.log(this.post);
+    // }
 }

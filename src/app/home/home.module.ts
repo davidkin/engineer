@@ -7,6 +7,7 @@ import { ModalComponent } from './modal/modal.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HomeComponent, ModalComponent],
@@ -15,7 +16,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatTableModule,
     AppRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule
   ],
   exports: [HomeComponent, ModalComponent],
   providers: [HomeService]

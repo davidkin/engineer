@@ -1,6 +1,5 @@
 .example-card {
   max-width: 400px;
-  margin: 30px auto;
   -webkit-box-shadow: 0px -11px 130px 6px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px -11px 130px 6px rgba(0,0,0,0.75);
   box-shadow: 0px -11px 130px 6px rgba(0,0,0,0.75);
