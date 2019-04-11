@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component'
 import { HomeService } from './home.services';
 import {MatTableModule} from '@angular/material/table';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, ModalComponent],
   imports: [
     CommonModule,
     MatTableModule
   ],
-  exports: [HomeComponent],
+  exports: [HomeComponent, ModalComponent],
   providers: [HomeService]
 })
 export class HomeModule { }

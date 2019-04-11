@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
     displayedColumns: Array<string> = ['title', 'url', 'created_at','author'];
     list: Observable<IPosts[]>;
@@ -29,14 +30,13 @@ export class HomeComponent implements OnInit {
         return setInterval(() => {
             this.list = this.homeService.getPostsInfo().pipe(
                 map((res: INews) => {
-                    console.log(res.hits)
                     return res.hits
                 })
             )
-        }, 10000)
+        }, 5000)
     }
 
-    // currencyArticle (post: IPosts ) {
-    //     this.homeService.setPosts(post);
-    // }
+    currencyArticle (post: IPosts ) {
+        this.homeService.setPosts(post);
+    }
 }
