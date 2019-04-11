@@ -20,9 +20,4 @@ export class ModalComponent implements OnInit {
     ngDoCheck(): void {
         this.post = this.homeService.getPost();
     }
-
-    // hideModal () {        
-    //     this.post = null;
-    //     console.log(this.post);
-    // }
 }
